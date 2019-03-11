@@ -1,0 +1,28 @@
+{
+  "name": "diksha-plugin",
+  "version": "1.0.0",
+  "description": "this is a diksha plugin",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc --noImplicitUseStrict && cp package.json ./dist",
+    "test": "echo 'go to '../test' folder to execute test cases!'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diptesh6501/diksha-plugin.git"
+  },
+  "author": "Diptesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Diptesh6501/diksha-plugin/issues"
+  },
+  "homepage": "https://github.com/Diptesh6501/diksha-plugin#readme",
+  "devDependencies": {
+    "@project-sunbird/ext-framework-server": "^0.1.10",
+    "@types/node": "^11.11.0",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
