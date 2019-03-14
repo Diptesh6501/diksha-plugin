@@ -2,21 +2,21 @@ import { setResponse } from './../utils/response';
 import * as fs from 'fs';
 import { ErrResponseMsg } from '../utils/constant';
 import * as path from 'path';
-export class FrameWork {
+export class OrgSearch {
     public sendResponse;
     public errMsg
     constructor() {
         this.sendResponse = setResponse
         this.errMsg = ErrResponseMsg
+
     }
 
-    public async read(req, res) {
-        const framework = req.params.framework;
-        let filePath = path.join(__dirname , '../data' , 'framework' , `${framework}.json`);
+    public async search(req, res) {
+        let filePath = path.join(__dirname, '../data', 'orgSearch', 'org.search.json');
         try {
             fs.stat(filePath, (err, stat) => {
                 if (err) {
-                    const response = this.sendResponse.errorResponse('api.framework.read', this.errMsg.ERR_404 , err);
+                    const response = this.sendResponse.errorResponse('api.framework.read', this.errMsg.ERR_404, err);
                     res.json({
                         data: response
                     })
@@ -40,3 +40,4 @@ export class FrameWork {
         }
     }
 }
+
