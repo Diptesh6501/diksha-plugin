@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf ./dist && tsc --noImplicitUseStrict && cp package.json ./dist",
-    "test": "echo 'go to '../test' folder to execute test cases!'"
+    "test": "mocha 'test/framework.test.ts'"
   },
   "repository": {
     "type": "git",
